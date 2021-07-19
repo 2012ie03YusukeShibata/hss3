@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/TopFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.myapplication.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/TopFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.myapplication.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TopFragment"
+        android:name="com.fujimic.hss3.view.fragment.TopFragment"
+        android:label="@string/top_fragment_label"
+        tools:layout="@layout/top_fragment">
+
+        <action
+            android:id="@+id/action_TopFragment_to_SettingFragment"
+            app:destination="@id/SettingsTopFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SettingsTopFragment"
+        android:name="com.fujimic.hss3.view.fragment.SettingsTopFragment"
+        android:label="Settings TOP"
+        tools:layout="@layout/settings_top_fragment">
+
+        <action
+            android:id="@+id/action_return_TOP"
+            app:destination="@id/TopFragment" />
+    </fragment>
+
+
+</navigation>
